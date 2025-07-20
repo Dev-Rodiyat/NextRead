@@ -48,7 +48,7 @@ export default function Explore() {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Header />
 
-      <section className="py-12 px-6 max-w-5xl pt-40 mx-auto text-center">
+      <section className="pb-4 px-6 max-w-5xl pt-40 mx-auto text-center">
         <motion.h2
           className="md:text-4xl text-2xl sm:text-3xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}
@@ -83,7 +83,7 @@ export default function Explore() {
         </form>
       </section>
 
-      <div className="flex overflow-x-auto gap-3 mb-8 px-4 scrollbar-hide lg:justify-center">
+      <div className="flex overflow-x-auto gap-3 mb-12 px-4 scrollbar-hide lg:justify-center">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -107,9 +107,9 @@ export default function Explore() {
 
       {error && toast.error(error)}
 
-      <section className="pb-20 px-6 max-w-6xl mx-auto">
+      <section className="pb-24 px-6 max-w-6xl mx-auto">
         <motion.h3
-          className="md:text-2xl sm:text-xl text-lg font-semibold mb-6"
+          className="md:text-2xl sm:text-xl text-lg font-semibold mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -173,7 +173,9 @@ export default function Explore() {
         </div>
       </section>
 
-      <Footer />
+      <div className="fixed bottom-0 w-full">
+        <Footer />
+      </div>
     </div>
   );
 }
