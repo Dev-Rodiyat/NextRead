@@ -17,7 +17,7 @@ export default function Favorites() {
     const bookToRemove = favorites.find((b) => b.id === id);
     if (!bookToRemove) return;
 
-    toggleFavorite(bookToRemove); // This will remove it via toggle logic
+    toggleFavorite(bookToRemove);
     setFavorites((prev) => prev.filter((b) => b.id !== id));
   };
 

@@ -25,7 +25,7 @@ export const categories = [
 export default function Explore() {
   const [query, setQuery] = useState("");
   const [genre, setGenre] = useState("Fiction");
-  const [favoritesUpdated, setFavoritesUpdated] = useState(false); // force re-render
+  const [favoritesUpdated, setFavoritesUpdated] = useState(false);
 
   const activeSearch = query.trim() || genre;
 
@@ -41,7 +41,7 @@ export default function Explore() {
 
   const handleToggleFavorite = (book) => {
     toggleFavorite(book);
-    setFavoritesUpdated((prev) => !prev); // trigger re-render
+    setFavoritesUpdated((prev) => !prev);
   };
 
   return (
@@ -120,7 +120,7 @@ export default function Explore() {
         <div className="grid md:grid-cols-3 gap-6">
           {books.map((book) => {
             const info = book.volumeInfo;
-            const fav = isFavorite(book.id); // always recompute
+            const fav = isFavorite(book.id);
 
             return (
               <Link

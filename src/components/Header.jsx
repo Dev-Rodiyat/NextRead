@@ -20,7 +20,6 @@ const Header = () => {
           <img src={NextRead} alt="NextRead" className="h-10 w-auto" />
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-700">
           {navLinks.map((link) => (
             <Link
@@ -35,7 +34,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile Menu Icon */}
         <button
           className="md:hidden"
           onClick={() => setMenuOpen(true)}
@@ -45,7 +43,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Modal Menu */}
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-50 flex justify-center items-start pt-28 md:hidden">
           <div className="bg-white w-11/12 max-w-sm rounded-lg shadow-xl p-6 relative">
