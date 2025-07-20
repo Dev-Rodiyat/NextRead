@@ -140,7 +140,7 @@ export default function Explore() {
                   {info.title}
                 </h2>
                 <p className="text-sm text-gray-600 pt-2">
-                  <span className="font-semibold">Author(s):</span>{" "}
+                  <span className="font-semibold">Author:</span>{" "}
                   {info.authors?.join(", ")}
                 </p>
                 <p className="text-sm text-gray-600 pt-1">

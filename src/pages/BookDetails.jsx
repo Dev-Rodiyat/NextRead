@@ -93,19 +93,19 @@ export default function BookDetails() {
                         </motion.h1>
 
                         {info?.authors && (
-                            <p className="text-gray-600 mb-2">By {info.authors.join(", ")}</p>
+                            <p className="text-gray-600 mb-2"><span className="font-semibold">Author(s): </span> {info.authors.join(", ")}</p>
                         )}
 
                         {info?.categories && (
-                            <p className="text-sm text-blue-600 mb-2">{info.categories.join(", ")}</p>
+                            <p className="text-sm text-blue-600 mb-2"><span className="font-semibold">Categories: </span>{info.categories.join(", ")}</p>
                         )}
 
                         {info?.publishedDate && (
-                            <p className="text-sm text-gray-500 mb-1">Published: {info.publishedDate}</p>
+                            <p className="text-sm text-gray-500 mb-1"><span className="font-semibold">Published: </span>{info.publishedDate}</p>
                         )}
 
                         {info?.pageCount && (
-                            <p className="text-sm text-gray-500 mb-4">Length: {info.pageCount} pages</p>
+                            <p className="text-sm text-gray-500 mb-4"><span className="font-semibold">Length: </span>{info.pageCount} pages</p>
                         )}
 
                         <motion.p
